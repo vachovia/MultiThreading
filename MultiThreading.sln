@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicSyntax", "BasicSyntax\BasicSyntax.csproj", "{59624065-D6AA-414D-8F60-E62BA7076A73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OffloadingTasks", "OffloadingTasks\OffloadingTasks.csproj", "{151EE224-1191-4B2D-91F3-9F2AED79E14E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59624065-D6AA-414D-8F60-E62BA7076A73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59624065-D6AA-414D-8F60-E62BA7076A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59624065-D6AA-414D-8F60-E62BA7076A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59624065-D6AA-414D-8F60-E62BA7076A73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{151EE224-1191-4B2D-91F3-9F2AED79E14E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{151EE224-1191-4B2D-91F3-9F2AED79E14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{151EE224-1191-4B2D-91F3-9F2AED79E14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{151EE224-1191-4B2D-91F3-9F2AED79E14E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF4CC957-8419-4CE5-9DEE-6E85C1107148}
+	EndGlobalSection
+EndGlobal
