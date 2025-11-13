@@ -1,7 +1,7 @@
 ﻿#if NET9_0_OR_GREATER
-// global using Lock = System.Threading.Lock;
+// global using counterLock = System.Threading.Lock;
 #else
-// global using Lock = System.Object;
+// global using counnterLock = System.Object;
 #endif
 namespace BasicSyntax
 {
