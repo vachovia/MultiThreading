@@ -5,7 +5,7 @@
 #endif
 namespace BasicSyntax
 {
-    internal class ThreadsSyncA
+    internal class ExclusiveLock
     {
         static int counter = 0;
         static object counterLock = new();
@@ -25,7 +25,7 @@ namespace BasicSyntax
             }
         }
 
-        public static void ThreadsSyncExample()
+        public static void ExclusiveLockExample()
         {
             Thread thread1 = new Thread(IncrementCounter);
             Thread thread2 = new Thread(IncrementCounter);

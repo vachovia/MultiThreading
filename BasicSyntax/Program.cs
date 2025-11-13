@@ -4,4 +4,4 @@
 // DivideAndConquer.DivideAndConquerExample();
 // WebServerSimulation.WebServerSimulationExample();
 // ThreadsSync.ThreadsSyncExample();
-ThreadsSyncA.ThreadsSyncExample();
+ExclusiveLock.ExclusiveLockExample();
