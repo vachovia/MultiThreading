@@ -87,12 +87,12 @@
         // 3. Processing the requests
         static void ProcessBooking(string? input)
         {
-            if (Monitor.TryEnter(ticketsLock, 2000))
+            if (Monitor.TryEnter(ticketsLock, 1000))
             {
                 try
                 {
                     // Simulate processing time
-                    Thread.Sleep(3000);
+                    Thread.Sleep(10000);
 
                     if (input == "b")
                     {
@@ -125,6 +125,10 @@
                 {
                     Monitor.Exit(ticketsLock);
                 }
+            }
+            else
+            {
+                Console.WriteLine("The system is busy. Please wait.");
             }
         }
 

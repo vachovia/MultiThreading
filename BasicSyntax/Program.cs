@@ -5,5 +5,6 @@
 //3. WebServerSimulation.WebServerSimulationExample();
 //4. ThreadsSync.ThreadsSyncExample();
 //5. ExclusiveLock.ExclusiveLockExample();
-TicketsBooking.TicketsBookingExample();//6. 
-//7. MonitorExample.Counter(); MonitorExample.TicketsBooking();
+//6. TicketsBooking.TicketsBookingExample();
+MonitorExample.Counter(); MonitorExample.TicketsBooking();//7. 
+//7a. MonitorTryEnterExample.MonitorTryEnterExampleMain();
