@@ -32,7 +32,7 @@
 
         static void MonitorQueue()
         {
-            while (true)
+            while (isRunning)
             {
                 if (requestQueue.Count > 0)
                 {
