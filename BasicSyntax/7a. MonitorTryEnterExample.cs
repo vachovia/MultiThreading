@@ -17,10 +17,11 @@ namespace BasicSyntax
             try
             {
                 // Attempt to acquire the lock for up to 500 milliseconds
-                Monitor.TryEnter(_lockObject, 1, ref acquiredLock);
+                Monitor.TryEnter(_lockObject, 500, ref acquiredLock);
 
                 if (acquiredLock)
                 {
+                    Thread.Sleep(100);
                     Console.WriteLine($"Thread {threadId}: Lock acquired. Counter before: {_counter}");
                     _counter++;
                     Thread.Sleep(100); // Simulate some work

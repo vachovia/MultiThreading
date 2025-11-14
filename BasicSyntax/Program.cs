@@ -7,4 +7,4 @@
 //5.  ExclusiveLock.ExclusiveLockExample();
 //6.  TicketsBooking.TicketsBookingExample();
 //7.  MonitorExample.Counter(); MonitorExample.TicketsBooking();
-//7a. MonitorTryEnterExample.MonitorTryEnterExampleMain();
+MonitorTryEnterExample.MonitorTryEnterExampleMain();//7a. 
