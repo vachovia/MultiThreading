@@ -8,4 +8,9 @@
 //6.   TicketsBooking.TicketsBookingExample();
 //7.   MonitorExample.Counter(); MonitorExample.TicketsBooking();
 //7a.  MonitorTryEnterExample.MonitorTryEnterExampleMain();
-MutexExample.MutexDemo(); //8.  
+//8.   MutexExample.MutexDemo();
+/*10.  
+       using SemaphoreSlim semaphore = new SemaphoreSlim(initialCount: 3, maxCount: 3);
+       var sem = new SemaphoreExample(semaphore);
+       sem.SemaphoreExampleExec(); 
+*/ 
