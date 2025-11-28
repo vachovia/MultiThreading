@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-
-namespace BasicSyntax
+﻿namespace BasicSyntax
 {
     public class MutexExample
     {
@@ -32,7 +30,6 @@ namespace BasicSyntax
             // With Mutex we ensure that even if multiple processes run this code simultaneously - result is 20000
             Console.WriteLine("Process finished.");
             Console.ReadLine();
-
         }
 
         static int ReadCounter(string filePath)

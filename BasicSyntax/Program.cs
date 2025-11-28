@@ -10,8 +10,20 @@
 //7a.  MonitorTryEnterExample.MonitorTryEnterExampleMain();
 //8.   MutexExample.MutexDemo();
 /*10.  
- *     // Semaphore is global within the process, but SemaphoreSlim is local to the process
-       using SemaphoreSlim semaphore = new SemaphoreSlim(initialCount: 3, maxCount: 3);
-       var sem = new SemaphoreExample(semaphore);
-       sem.SemaphoreExampleExec(); 
-*/ 
+      // Semaphore is global within the process, but SemaphoreSlim is local to the process
+      using SemaphoreSlim semaphore = new SemaphoreSlim(initialCount: 3, maxCount: 3);
+      var sem = new SemaphoreExample(semaphore);
+      sem.SemaphoreExampleExec(); 
+*/
+/*11.
+     // AutoResetEvent 
+     using AutoResetEvent autoResetEvent = new AutoResetEvent(false);
+     var arEvent = new AutoResetEventExample(autoResetEvent);
+     // arEvent.AutoResetEventSingleExec();
+     arEvent.AutoResetEventMultyExec();
+*/
+/*12. */
+    // ManualResetEvent 
+    using ManualResetEventSlim manualResetEvent = new ManualResetEventSlim(false);
+    var mrEvent = new ManualResetEventExample(manualResetEvent);
+    mrEvent.ManualResetEventExec();
