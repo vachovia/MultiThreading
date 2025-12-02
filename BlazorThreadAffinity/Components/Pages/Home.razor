@@ -1,0 +1,46 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<br />
+<br />
+
+@currentTime
+
+<br />
+<br />
+<button type="button"
+        class="btn btn-primary"
+        @onclick="DisplayTime">
+    Display Time
+</button>
+
+@code {
+    string currentTime = string.Empty;
+
+    void DisplayTime()
+    {
+        // currentTime = DateTime.Now.ToString(); // This works fine.
+
+        // Thread thread = new Thread(() =>
+        // {
+        //     Thread.Sleep(500);
+        //     currentTime = DateTime.Now.ToString();
+        //     StateHasChanged(); // This will throw an exception.
+        // });
+        // thread.Start();
+
+        Thread thread = new Thread(() =>
+        {
+            Thread.Sleep(500);
+            currentTime = DateTime.Now.ToString();
+            base.InvokeAsync(StateHasChanged);
+        });
+        thread.Start();
+    }
+
+}

@@ -2,6 +2,7 @@ namespace OffloadingTasks
 {
     public partial class TasksForm : Form
     {
+        // Thready affinity example without using Tasks
         public TasksForm()
         {
             InitializeComponent();
@@ -30,18 +31,12 @@ namespace OffloadingTasks
 
             if (lblMessage.InvokeRequired)
             {
-                lblMessage.BeginInvoke(() => lblMessage.Text = message);
+                lblMessage.Invoke(() => lblMessage.Text = message); // Synchronize with the UI thread
             }
             else
             {
                 lblMessage.Text = message;
             }
-        }
-
-        private void ShowMessage1(string message, int delay)
-        {
-            Thread.Sleep(delay);
-            lblMessage.BeginInvoke(() => lblMessage.Text = message);
         }
     }
 }

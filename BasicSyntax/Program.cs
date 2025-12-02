@@ -22,8 +22,16 @@
      // arEvent.AutoResetEventSingleExec();
      arEvent.AutoResetEventMultyExec();
 */
-/*12. */
+/*12.
     // ManualResetEvent 
     using ManualResetEventSlim manualResetEvent = new ManualResetEventSlim(false);
     var mrEvent = new ManualResetEventExample(manualResetEvent);
     mrEvent.ManualResetEventExec();
+ */
+/*13.
+    // TwoWaySignalingInProducer 
+    using ManualResetEventSlim consumeEvent = new ManualResetEventSlim(false);
+    using ManualResetEventSlim produceEvent = new ManualResetEventSlim(true);
+    var producerExample = new TwoWaySignalingInProducer(consumeEvent, produceEvent);
+    producerExample.TwoWaySignalingInProducerExec();
+*/
