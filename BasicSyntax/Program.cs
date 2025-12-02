@@ -35,3 +35,4 @@
     var producerExample = new TwoWaySignalingInProducer(consumeEvent, produceEvent);
     producerExample.TwoWaySignalingInProducerExec();
 */
+    DeadlockExample.Exec(); //14.  
