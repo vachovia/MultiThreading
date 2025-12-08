@@ -7,7 +7,7 @@
         static object ticketsLock = new object();
         static Queue<string?> requestQueue = new Queue<string?>();
 
-        public static void TicketsBookingExample()
+        public static void Run()
         {
             Thread monitoringThread = new Thread(MonitorQueue);
             monitoringThread.Start();

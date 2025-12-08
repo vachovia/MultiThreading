@@ -5,7 +5,7 @@
         static volatile bool isRunning = true;
         static Queue<string?> requestQueue = new Queue<string?>();
 
-        public static void WebServerSimulationExample()
+        public static void Run()
         {
             // Start a thread to monitor the request queue
             // it does not block the main thread from accepting new inputs.
@@ -19,6 +19,8 @@
             {
                 // main thread reads user input
                 string? input = Console.ReadLine();
+                Console.WriteLine($"Main ThreadId: {Thread.CurrentThread.ManagedThreadId}"); // Shows 1 always
+
                 if (input?.ToLower() == "exit")
                 {
                     isRunning = false;
@@ -40,6 +42,8 @@
                 {
                     string? input = requestQueue.Dequeue();
 
+                    Console.WriteLine($"Monitor Queue ThreadId: {Thread.CurrentThread.ManagedThreadId}"); // Shows 12 always
+
                     // Process each request in a separate thread to simulate concurrent handling
                     // otherwise, processing one request would block the monitoring of new requests.
                     Thread processingThread = new Thread(() => ProcessInput(input));
@@ -56,6 +60,8 @@
             Thread.Sleep(2000);
 
             Console.WriteLine($"Processed input: {input}");
+
+            Console.WriteLine($"Process Input ThreadId: {Thread.CurrentThread.ManagedThreadId}"); // Shows different thread IDs like 13, 14, 15, etc.
         }
     }
 }

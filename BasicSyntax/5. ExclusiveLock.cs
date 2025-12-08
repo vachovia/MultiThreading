@@ -25,7 +25,7 @@ namespace BasicSyntax
             }
         }
 
-        public static void ExclusiveLockExample()
+        public static void Exec()
         {
             Thread thread1 = new Thread(IncrementCounter);
             Thread thread2 = new Thread(IncrementCounter);

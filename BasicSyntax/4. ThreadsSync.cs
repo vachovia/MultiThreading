@@ -16,7 +16,7 @@
             }
         }
 
-        static public void ThreadsSyncExample()
+        static public void Exec()
         {
             Thread thread1 = new Thread(IncrementCounter);
             Thread thread2 = new Thread(IncrementCounter);
