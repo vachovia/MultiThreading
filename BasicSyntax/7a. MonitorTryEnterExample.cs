@@ -16,7 +16,7 @@ namespace BasicSyntax
             bool acquiredLock = false;
             try
             {
-                // Attempt to acquire the lock for up to 500 milliseconds
+                // Attempt to acquire the lock with a timeout of 500 milliseconds
                 Monitor.TryEnter(_lockObject, 500, ref acquiredLock);
 
                 if (acquiredLock)
@@ -41,7 +41,7 @@ namespace BasicSyntax
             }
         }
 
-        public static void MonitorTryEnterExampleMain()
+        public static void Run()
         {
             MonitorTryEnterExample example = new MonitorTryEnterExample();
 

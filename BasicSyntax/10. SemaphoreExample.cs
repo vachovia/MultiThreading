@@ -14,7 +14,7 @@
             _semaphore = semaphore;
         }
 
-        public void SemaphoreExampleExec()
+        public void Exec()
         {
             // 2. Start the requests queue monitoring thread
             Thread monitoringThread = new Thread(MonitorQueue);

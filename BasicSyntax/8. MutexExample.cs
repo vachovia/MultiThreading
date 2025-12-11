@@ -2,7 +2,7 @@
 {
     public class MutexExample
     {
-        public static void MutexDemo()
+        public static void Run()
         {
             // find in the output folder - bin/Debug/net8.0/counter.txt
             string filePath = "counter.txt";

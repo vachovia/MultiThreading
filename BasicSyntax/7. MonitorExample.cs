@@ -24,7 +24,7 @@
             }
         }
 
-        static public void Counter()
+        static public void RunCounter()
         {
             Thread thread1 = new Thread(IncrementCounter);
             Thread thread2 = new Thread(IncrementCounter);
@@ -47,7 +47,7 @@
         static object ticketsLock = new object();
         static Queue<string?> requestQueue = new Queue<string?>();
 
-        public static void TicketsBooking()
+        public static void RunTicketsBooking()
         {
             Thread monitoringThread = new Thread(MonitorQueue);
             monitoringThread.Start();

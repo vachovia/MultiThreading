@@ -11,7 +11,7 @@
 
             try
             {
-                _lock.EnterWriteLock(); // only one thread can write at a time - exclusive lock
+                _lock.EnterWriteLock(); // only one thread can write at a time - exclusive lock !!!!!!!!!
 
                 lockAcquired = true;
 
@@ -29,7 +29,7 @@
 
             try
             {
-                _lock.EnterReadLock(); // multiple threads can read simultaneously - shared lock
+                _lock.EnterReadLock(); // multiple threads can read simultaneously - shared lock !!!!!!!!!
 
                 lockAcquired = true;
 
