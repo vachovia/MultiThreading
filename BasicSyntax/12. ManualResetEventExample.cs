@@ -2,7 +2,6 @@
 {
     public class ManualResetEventExample
     {
-        string? userInput = null;
         ManualResetEventSlim _manualResetEvent;
 
         public ManualResetEventExample(ManualResetEventSlim manualResetEvent)
