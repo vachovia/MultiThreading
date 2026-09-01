@@ -1,10 +1,14 @@
 ﻿using BasicSyntax;
 
-/*1.   ThreadCreation.ThreadCreationExample();*/
+/*1.
+       ThreadCreation.ThreadCreationExample();
+       // ThreadCreation.PriorityAffinityDemo();
+*/
 /*2.   DivideAndConquer.DivideAndConquerExample();*/
 /*3.   WebServerSimulation.Run();*/
 /*4.   ThreadsSync.Exec();*/
 /*5.   ExclusiveLock.Exec();*/
+/*5.1. InterlockedExample.Exec();*/
 /*6.   TicketsBooking.Run();*/
 /*7.   
        MonitorExample.RunCounter();
@@ -19,13 +23,14 @@
        var sem = new SemaphoreExample(semaphore);
        sem.Exec(); 
 */
-/*11.*/
+/*10.1.*/ SemaphoreSlimBasics.Exec();
+/*11.
        // AutoResetEvent 
        using AutoResetEvent autoResetEvent = new AutoResetEvent(false);
        var arEvent = new AutoResetEventExample(autoResetEvent);
        // arEvent.AutoResetEventSingleExec();
-       arEvent.AutoResetEventMultyExec();
-
+       arEvent.AutoResetEventMultiExec();
+*/
 /*12.
        // ManualResetEvent 
        using ManualResetEventSlim manualResetEvent = new ManualResetEventSlim(false);
@@ -40,3 +45,13 @@
        producerExample.TwoWaySignalingInProducerExec();
 */
 /*14.  DeadlockExample.Exec();*/
+/*15.
+       // Barrier - the post-phase action runs once per phase, on the last
+       // thread to arrive, before the participants are released.
+       using Barrier barrier = new Barrier(participantCount: 3, postPhaseAction: b =>
+       {
+           Console.WriteLine($"--- All workers reached the barrier. Phase {b.CurrentPhaseNumber} done. ---");
+       });
+       var barrierExample = new BarrierExample(barrier);
+       barrierExample.Exec();
+*/

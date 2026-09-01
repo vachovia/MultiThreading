@@ -49,7 +49,7 @@
             }
         }
 
-        public void AutoResetEventMultyExec()
+        public void AutoResetEventMultiExec()
         {
             ///////////////////////////////////////////////////////////////////////
             // Single Worker thread
@@ -60,7 +60,7 @@
             // Start the worker thread
             for (int i = 0; i < 3; i++)
             {
-                Thread workerThread = new Thread(WorkerMulty);
+                Thread workerThread = new Thread(WorkerMulti);
                 workerThread.Name = $"Worker {i + 1}";
                 workerThread.Start();
             }
@@ -79,7 +79,7 @@
             }
         }
 
-        void WorkerMulty()
+        void WorkerMulti()
         {
             while (true)
             {
